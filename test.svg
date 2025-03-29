@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <pattern id="wavy" patternUnits="userSpaceOnUse" width="200" height="200">
+      <!-- More defined wavy lines with organic variation -->
+      <path d="M -5 15 C 17 8, 42 28, 65 15 S 103 5, 125 22 S 158 35, 182 12 S 225 8, 245 17" stroke="#b8b3b0" stroke-width="0.8" fill="none" opacity="0.4"/>
+      <path d="M 0 39 C 22 32, 35 52, 62 41 S 98 31, 118 45 S 165 48, 185 36 S 218 32, 240 38" stroke="#b8b3b0" stroke-width="0.9" fill="none" opacity="0.45"/>
+      <path d="M -8 61 C 15 54, 38 75, 57 60 S 95 52, 123 65 S 162 77, 183 61 S 223 51, 238 61" stroke="#b8b3b0" stroke-width="0.85" fill="none" opacity="0.42"/>
+      <path d="M 3 82 C 25 74, 43 95, 59 82 S 102 71, 122 87 S 157 98, 177 81 S 217 72, 237 79" stroke="#b8b3b0" stroke-width="0.9" fill="none" opacity="0.45"/>
+      <path d="M -4 104 C 18 96, 43 115, 64 102 S 105 91, 128 107 S 167 112, 180 98 S 219 92, 241 103" stroke="#b8b3b0" stroke-width="0.8" fill="none" opacity="0.4"/>
+      <path d="M 2 124 C 23 115, 36 135, 58 122 S 95 114, 117 128 S 162 138, 183 119 S 222 112, 242 123" stroke="#b8b3b0" stroke-width="0.9" fill="none" opacity="0.43"/>
+      <path d="M -6 145 C 14 137, 40 158, 62 143 S 99 132, 124 148 S 159 159, 178 142 S 214 134, 236 143" stroke="#b8b3b0" stroke-width="0.85" fill="none" opacity="0.42"/>
+      <path d="M 5 162 C 25 154, 38 175, 55 161 S 93 150, 115 165 S 164 178, 186 159 S 228 152, 245 163" stroke="#b8b3b0" stroke-width="0.9" fill="none" opacity="0.45"/>
+      <path d="M -3 183 C 18 174, 45 195, 67 180 S 105 169, 127 186 S 166 198, 185 181 S 226 173, 238 183" stroke="#b8b3b0" stroke-width="0.8" fill="none" opacity="0.4"/>
+      <path d="M 2 201 C 25 192, 41 212, 63 197 S 102 187, 120 203 S 157 215, 178 198 S 220 189, 242 198" stroke="#b8b3b0" stroke-width="0.85" fill="none" opacity="0.43"/>
+    </pattern>
+  </defs>
+
+  <!-- Background color as requested (#f0ebe8) -->
+  <rect width="100%" height="100%" fill="#f0ebe8"/>
+  
+  <!-- Wavy line pattern overlay -->
+  <rect width="100%" height="100%" fill="url(#wavy)"/>
+</svg>

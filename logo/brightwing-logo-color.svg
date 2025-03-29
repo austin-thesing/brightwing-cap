@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" width="480" height="240">
+  <!-- Color Brightwing Capital Logo -->
+  <defs>
+    <!-- Define gradients for each diamond -->
+    <linearGradient id="gradient-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E30613" />
+      <stop offset="100%" stop-color="#F15A24" />
+    </linearGradient>
+    <linearGradient id="gradient-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F15A24" />
+      <stop offset="100%" stop-color="#F7931E" />
+    </linearGradient>
+    <linearGradient id="gradient-3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7931E" />
+      <stop offset="100%" stop-color="#FBB03B" />
+    </linearGradient>
+    <linearGradient id="gradient-4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBB03B" />
+      <stop offset="100%" stop-color="#FFDE17" />
+    </linearGradient>
+  </defs>
+  
+  <g id="brightwing-logo-color">
+    <!-- Diamond 1 (Left - Red) -->
+    <path id="diamond-1-color" d="M85,120 L145,60 L205,120 L145,180 Z" fill="url(#gradient-1)" />
+    <!-- Diamond 2 (Middle Left - Orange) -->
+    <path id="diamond-2-color" d="M145,120 L205,60 L265,120 L205,180 Z" fill="url(#gradient-2)" />
+    <!-- Diamond 3 (Middle Right - Orange/Yellow) -->
+    <path id="diamond-3-color" d="M205,120 L265,60 L325,120 L265,180 Z" fill="url(#gradient-3)" />
+    <!-- Diamond 4 (Right - Yellow) -->
+    <path id="diamond-4-color" d="M265,120 L325,60 L385,120 L325,180 Z" fill="url(#gradient-4)" />
+  </g>
+</svg> 

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" width="480" height="240">
+  <!-- Single-tone Brightwing Capital Logo -->
+  <g id="brightwing-logo" fill="#162135">
+    <!-- Diamond 1 (Left) -->
+    <path id="diamond-1" d="M85,120 L145,60 L205,120 L145,180 Z" />
+    <!-- Diamond 2 (Middle Left) -->
+    <path id="diamond-2" d="M145,120 L205,60 L265,120 L205,180 Z" />
+    <!-- Diamond 3 (Middle Right) -->
+    <path id="diamond-3" d="M205,120 L265,60 L325,120 L265,180 Z" />
+    <!-- Diamond 4 (Right) -->
+    <path id="diamond-4" d="M265,120 L325,60 L385,120 L325,180 Z" />
+  </g>
+</svg> 

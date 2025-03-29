@@ -1,0 +1,88 @@
+<!-- Wave Divider Implementation -->
+<div class="section-divider">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 C480,40 960,40 1440,0 L1440,60 L0,60 Z" fill="#FFFFFF" />
+  </svg>
+</div>
+
+<!-- Diamond W Divider Implementation -->
+<div class="diamond-divider">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Left Diamond (Perfect Square Rotated 45°) -->
+    <path d="M480,20 L520,60 L480,100 L440,60 Z" fill="#FF0000" class="diamond left" />
+    <!-- Center Diamond (Perfect Square Rotated 45°) -->
+    <path d="M680,40 L720,80 L680,120 L640,80 Z" fill="#FF6B00" class="diamond center" />
+    <!-- Right Diamond (Perfect Square Rotated 45°) -->
+    <path d="M880,20 L920,60 L880,100 L840,60 Z" fill="#FFB800" class="diamond right" />
+  </svg>
+</div>
+
+<!-- CSS For Divider -->
+<style>
+  .section-divider {
+    position: relative;
+    width: 100%;
+    height: 60px; /* Adjust this value to control the curve height */
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .section-divider svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<!-- CSS For Diamond Divider -->
+<style>
+  .diamond-divider {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .diamond-divider svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .diamond-divider .diamond {
+    transition: transform 0.3s ease;
+  }
+
+  .diamond-divider:hover .diamond.left {
+    transform: translate(-10px, 0) rotate(0deg);
+  }
+
+  .diamond-divider:hover .diamond.center {
+    transform: translate(0, 10px) rotate(0deg);
+  }
+
+  .diamond-divider:hover .diamond.right {
+    transform: translate(10px, 0) rotate(0deg);
+  }
+</style>
+
+<!-- 
+Usage Notes:
+1. Copy this HTML between two sections in Webflow using the "Embed" element
+2. Change the fill="#FFFFFF" to match your next section's background color
+3. Place the section with your primary brand color above this divider
+4. Adjust the height value (default: 60px) to make the curve deeper or shallower
+
+Usage Notes for Diamond Divider:
+1. Copy this HTML between two sections in Webflow using the "Embed" element
+2. The diamonds use the Brightwing brand colors by default
+3. Hover effect is included but optional - remove the hover styles if not needed
+4. Each diamond is now a perfect square rotated 45 degrees
+5. The diamonds are centered horizontally - adjust the path coordinates to reposition
+-->

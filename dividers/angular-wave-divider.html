@@ -1,0 +1,68 @@
+<!-- Brightwing Angular Edge Divider -->
+<div class="brightwing-edge-divider">
+  <svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1440" height="48" fill="var(--divider-background, #ffffff)" />
+    <path d="M0 48L240 24L480 36L720 12L960 32L1200 16L1440 28L1440 48L0 48Z" fill="var(--divider-shape-color, #f15900)" />
+    <path d="M0 48L240 28L480 40L720 16L960 36L1200 20L1440 32L1440 48L0 48Z" fill="var(--divider-shape-color, #f15900)" fill-opacity="0.5" />
+  </svg>
+</div>
+
+<style>
+  .brightwing-edge-divider {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: block;
+    pointer-events: none;
+    --divider-shape-color: #f15900;
+    --divider-background: #ffffff;
+  }
+
+  .brightwing-edge-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100%;
+  }
+
+  /* Color combinations */
+  .brightwing-edge-divider.light-to-orange {
+    --divider-shape-color: #f15900;
+    --divider-background: #ffffff;
+  }
+
+  .brightwing-edge-divider.orange-to-light {
+    --divider-shape-color: #ffffff;
+    --divider-background: #f15900;
+  }
+
+  .brightwing-edge-divider.light-to-dark {
+    --divider-shape-color: #2d2825;
+    --divider-background: #ffffff;
+  }
+
+  .brightwing-edge-divider.dark-to-light {
+    --divider-shape-color: #ffffff;
+    --divider-background: #2d2825;
+  }
+</style>
+
+<!-- 
+Usage Notes for Brightwing Angular Edge Divider:
+1. Copy this HTML between sections in Webflow using the "Embed" element
+2. Control colors by setting CSS variables on the container:
+   - --divider-shape-color: controls the angular shapes (default: #f15900)
+   - --divider-background: controls the background (default: #ffffff)
+3. Or use preset classes:
+   - .light-to-orange: white background to orange shapes (default)
+   - .orange-to-light: orange background to white shapes
+   - .light-to-dark: white background to dark shapes
+   - .dark-to-light: dark background to white shapes
+4. Example usage with custom colors:
+   <div class="brightwing-edge-divider" style="--divider-shape-color: #your-color; --divider-background: #your-bg-color;">
+5. Creates a layered angular edge effect that scales automatically
+6. Height can be adjusted by modifying both the SVG viewBox and the height property
+-->

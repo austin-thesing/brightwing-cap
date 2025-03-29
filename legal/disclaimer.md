@@ -1,0 +1,3 @@
+# Brightwing Capital Portfolio Disclaimer
+
+The portfolio companies displayed on this page represent a select subset of investments made by funds managed by Brightwing Capital. This selection is not comprehensive and should not be interpreted as a complete investment history. Investment performance varies, and the success of previous investments is not indicative of future outcomes. While we strive to maintain an updated list of investments, which can be accessed here, recent investment activities or divestments may not be immediately reflected. Brightwing Capital typically updates this information on a quarterly basis. Past performance of Brightwing Capital's managed funds should not be relied upon as a predictor of future results.
