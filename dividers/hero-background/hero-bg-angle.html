@@ -1,5 +1,5 @@
 <style>
-  /* Brightwing Hero Background with Wavy Lines */
+  /* Brightwing Hero Background with Angled Lines */
   .hero-section {
     position: relative;
     width: 100%;
@@ -19,7 +19,7 @@
     overflow: hidden;
   }
 
-  /* Create a separate container for the wavy lines */
+  /* Create a separate container for the angled lines */
   .wavy-lines {
     position: absolute;
     top: 0;
@@ -29,51 +29,54 @@
     opacity: 0.7;
   }
 
-  /* Base wavy lines using SVG - using orange */
+  /* Base angled lines using SVG - using orange */
   .wavy-lines::before {
+    content: "";
+    position: absolute;
+    top: -75%;
+    left: -50%;
+    right: -50%;
+    bottom: -25%;
+    background-image: url("data:image/svg+xml,%3Csvg width='2400' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,65 L300,45 L600,60 L900,40 L1200,57 L1500,37 L1800,55 L2100,35 L2400,52' stroke='rgba(241,89,0,0.25)' fill='none' stroke-width='0.5' vector-effect='non-scaling-stroke'/%3E%3Cpath d='M0,55 L300,35 L600,50 L900,30 L1200,47 L1500,27 L1800,45 L2100,25 L2400,42' stroke='rgba(241,89,0,0.2)' fill='none' stroke-width='0.5' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+    background-size: 2400px 80px;
+    background-position: 0 0;
+    background-repeat: repeat;
+    transform: rotate(-20deg);
+    z-index: 1;
+    animation: subtleAngle 8s ease-in-out infinite;
+  }
+
+  /* Accent angled lines using SVG - using warmer orange */
+  .wavy-lines::after {
     content: "";
     position: absolute;
     top: -50%;
     left: -50%;
     right: -50%;
     bottom: -50%;
-    background-image: url("data:image/svg+xml,%3Csvg width='2400' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,40 C100,20 200,60 300,40 C400,20 500,60 600,40 C700,20 800,60 900,40 C1000,20 1100,60 1200,40 C1300,20 1400,60 1500,40 C1600,20 1700,60 1800,40 C1900,20 2000,60 2100,40 C2200,20 2300,60 2400,40' stroke='rgba(241,89,0,0.25)' fill='none' stroke-width='0.5' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='2400' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,60 L300,40 L600,57 L900,37 L1200,55 L1500,35 L1800,52 L2100,32 L2400,50' stroke='rgba(247,132,2,0.35)' fill='none' stroke-width='0.75' vector-effect='non-scaling-stroke'/%3E%3Cpath d='M0,50 L300,30 L600,47 L900,27 L1200,45 L1500,25 L1800,42 L2100,22 L2400,40' stroke='rgba(247,132,2,0.25)' fill='none' stroke-width='0.5' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
     background-size: 2400px 80px;
+    background-position: 0 15px;
     background-repeat: repeat;
-    transform: rotate(-5deg);
-    z-index: 1;
-    animation: subtleWave 12s ease-in-out infinite;
+    transform: rotate(-20deg);
+    z-index: 2;
+    animation: subtleAngle 10s ease-in-out infinite;
   }
 
-  /* Accent wavy lines using SVG - using warmer orange */
-  .wavy-lines::after {
-    content: "";
+  /* Additional angled lines for depth - using golden yellow */
+  .wavy-lines-secondary {
     position: absolute;
     top: -25%;
     left: -50%;
     right: -50%;
     bottom: -75%;
-    background-image: url("data:image/svg+xml,%3Csvg width='2400' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,40 C100,15 200,65 300,40 C400,15 500,65 600,40 C700,15 800,65 900,40 C1000,15 1100,65 1200,40 C1300,15 1400,65 1500,40 C1600,15 1700,65 1800,40 C1900,15 2000,65 2100,40 C2200,15 2300,65 2400,40' stroke='rgba(247,132,2,0.35)' fill='none' stroke-width='0.75' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='2400' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,55 L300,35 L600,52 L900,32 L1200,50 L1500,30 L1800,47 L2100,27 L2400,45' stroke='rgba(249,167,0,0.2)' fill='none' stroke-width='0.5' vector-effect='non-scaling-stroke'/%3E%3Cpath d='M0,45 L300,25 L600,42 L900,22 L1200,40 L1500,20 L1800,37 L2100,17 L2400,35' stroke='rgba(249,167,0,0.15)' fill='none' stroke-width='0.5' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
     background-size: 2400px 80px;
+    background-position: 0 30px;
     background-repeat: repeat;
-    transform: rotate(-5deg);
-    z-index: 2;
-    animation: subtleWave 15s ease-in-out infinite;
-  }
-
-  /* Additional waves for more depth - using golden yellow */
-  .wavy-lines-secondary {
-    position: absolute;
-    top: 0;
-    left: -50%;
-    right: -50%;
-    bottom: -100%;
-    background-image: url("data:image/svg+xml,%3Csvg width='2400' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,40 C100,25 200,55 300,40 C400,25 500,55 600,40 C700,25 800,55 900,40 C1000,25 1100,55 1200,40 C1300,25 1400,55 1500,40 C1600,25 1700,55 1800,40 C1900,25 2000,55 2100,40 C2200,25 2300,55 2400,40' stroke='rgba(249,167,0,0.2)' fill='none' stroke-width='0.5' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
-    background-size: 2400px 80px;
-    background-repeat: repeat;
-    transform: rotate(-5deg);
+    transform: rotate(-20deg);
     z-index: 1;
-    animation: subtleWave 18s ease-in-out infinite;
+    animation: subtleAngle 12s ease-in-out infinite;
   }
 
   /* Angular divider */
@@ -96,7 +99,7 @@
     right: -5%;
     width: 45%;
     height: 80%;
-    transform: translateY(-50%) rotate(-15deg);
+    transform: translateY(-50%) rotate(-35deg);
     clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
     background: linear-gradient(135deg, rgba(249, 167, 0, 0.3), rgba(249, 167, 0, 0.1));
     z-index: 1;
@@ -125,19 +128,24 @@
     }
   }
 
-  /* Update theme-specific styles for the wing */
+  /* Subtle angle animation */
+  @keyframes subtleAngle {
+    0%,
+    100% {
+      transform: rotate(-20deg) translateY(0);
+    }
+    50% {
+      transform: rotate(-20deg) translateY(8px);
+    }
+  }
+
+  /* Theme-specific styles */
   .hero-bg.light-theme .hero-wing {
     background: linear-gradient(135deg, rgba(249, 167, 0, 0.2), rgba(249, 167, 0, 0.05));
   }
 
   .hero-bg.dark-theme .hero-wing {
     background: linear-gradient(135deg, rgba(249, 167, 0, 0.4), rgba(249, 167, 0, 0.2));
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .hero-wing {
-      animation: none;
-    }
   }
 
   /* Content positioning */
@@ -148,22 +156,12 @@
     box-sizing: border-box;
   }
 
-  /* Subtle wave animation */
-  @keyframes subtleWave {
-    0%,
-    100% {
-      transform: rotate(-5deg) translateY(0);
-    }
-    50% {
-      transform: rotate(-5deg) translateY(4px);
-    }
-  }
-
   /* Accessibility */
   @media (prefers-reduced-motion: reduce) {
     .wavy-lines::before,
     .wavy-lines::after,
-    .wavy-lines-secondary {
+    .wavy-lines-secondary,
+    .hero-wing {
       animation: none;
     }
   }
