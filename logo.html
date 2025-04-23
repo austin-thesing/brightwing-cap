@@ -1,0 +1,47 @@
+<style>
+  #logoScalePop {
+    width: 96px;
+    height: auto;
+    display: block;
+    overflow: visible;
+  }
+  @media (max-width: 480px) {
+    #logoScalePop {
+      width: 64px;
+    }
+  }
+</style>
+
+<svg id="logoScalePop" viewBox="0 -32 510 310" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+  <rect class="diamond" x="25" y="25" width="120" height="120" fill="#d90700" />
+  <rect class="diamond" x="110" y="110" width="120" height="120" fill="#e85e0d" />
+  <rect class="diamond" x="195" y="25" width="120" height="120" fill="#f28a19" />
+  <rect class="diamond" x="280" y="110" width="120" height="120" fill="#f9a600" />
+  <rect class="diamond" x="365" y="25" width="120" height="120" fill="#f8d900" />
+</svg>
+
+<noscript>
+  <!-- Static fallback of the logo (no classes/IDs needed) -->
+  <svg viewBox="0 -32 510 310" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="width: 96px; height: auto; overflow: visible">
+    <rect x="25" y="25" width="120" height="120" fill="#d90700" />
+    <rect x="110" y="110" width="120" height="120" fill="#e85e0d" />
+    <rect x="195" y="25" width="120" height="120" fill="#f28a19" />
+    <rect x="280" y="110" width="120" height="120" fill="#f9a600" />
+    <rect x="365" y="25" width="120" height="120" fill="#f8d900" />
+  </svg>
+</noscript>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const diamonds = [...document.querySelectorAll("#logoScalePop .diamond")];
+    gsap.from(diamonds, { scale: 0, opacity: 0, stagger: 0.08, duration: 0.4, ease: "back.out(1.7)" });
+    const tl = gsap.timeline({ repeat: -1, paused: true });
+    diamonds.forEach((el) => tl.to(el, { scale: 1.08, opacity: 0.8, duration: 0.5, yoyo: true, repeat: 1 }, ">-0.42"));
+    const logo = document.getElementById("logoScalePop");
+    logo.addEventListener("mouseenter", () => tl.restart());
+    logo.addEventListener("mouseleave", () => {
+      tl.pause(0);
+      gsap.to(diamonds, { scale: 1, opacity: 1, duration: 0.25 });
+    });
+  });
+</script>

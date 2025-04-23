@@ -1,0 +1,65 @@
+<style>
+  #error404 {
+    width: 400px;
+    height: auto;
+    display: block;
+    overflow: visible;
+    margin-top: 48px;
+  }
+  @media (max-width: 480px) {
+    #error404 {
+      width: 180px;
+    }
+  }
+</style>
+
+<svg id="error404" viewBox="0 0 1180 650" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left 4 -->
+  <g>
+    <rect class="sq" width="120" height="120" fill="#d90700" x="0" y="0" />
+    <rect class="sq" width="120" height="120" fill="#e85e0d" x="0" y="130" />
+    <rect class="sq" width="120" height="120" fill="#f28a19" x="130" y="130" />
+    <rect class="sq" width="120" height="120" fill="#f9a600" x="260" y="0" />
+    <rect class="sq" width="120" height="120" fill="#f8d900" x="260" y="130" />
+    <rect class="sq" width="120" height="120" fill="#e85e0d" x="260" y="260" />
+    <rect class="sq" width="120" height="120" fill="#f28a19" x="260" y="390" />
+  </g>
+  <!-- 0 -->
+  <g transform="translate(520 0)">
+    <rect class="sq" width="120" height="120" fill="#d90700" x="0" y="0" />
+    <rect class="sq" width="120" height="120" fill="#e85e0d" x="130" y="0" />
+    <rect class="sq" width="120" height="120" fill="#f28a19" x="260" y="0" />
+    <rect class="sq" width="120" height="120" fill="#f9a600" x="0" y="130" />
+    <rect class="sq" width="120" height="120" fill="#f8d900" x="260" y="130" />
+    <rect class="sq" width="120" height="120" fill="#d90700" x="0" y="260" />
+    <rect class="sq" width="120" height="120" fill="#e85e0d" x="260" y="260" />
+    <rect class="sq" width="120" height="120" fill="#f28a19" x="0" y="390" />
+    <rect class="sq" width="120" height="120" fill="#f9a600" x="130" y="390" />
+    <rect class="sq" width="120" height="120" fill="#f8d900" x="260" y="390" />
+  </g>
+  <!-- Right 4 -->
+  <g transform="translate(1040 0)">
+    <rect class="sq" width="120" height="120" fill="#d90700" x="0" y="0" />
+    <rect class="sq" width="120" height="120" fill="#e85e0d" x="0" y="130" />
+    <rect class="sq" width="120" height="120" fill="#f28a19" x="130" y="130" />
+    <rect class="sq" width="120" height="120" fill="#f9a600" x="260" y="0" />
+    <rect class="sq" width="120" height="120" fill="#f8d900" x="260" y="130" />
+    <rect class="sq" width="120" height="120" fill="#e85e0d" x="260" y="260" />
+    <rect class="sq" width="120" height="120" fill="#f28a19" x="260" y="390" />
+  </g>
+</svg>
+
+<noscript>
+  <!-- Static fallback for 404 (same viewBox, no classes) -->
+  <svg viewBox="0 0 1180 650" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="width: 400px; height: auto; overflow: visible">
+    <!-- (identical square layout as above, without animation classes) -->
+    <use href="#error404" />
+  </svg>
+</noscript>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const sqs = [...document.querySelectorAll("#error404 .sq")];
+    gsap.to(sqs, { scale: 1.06, opacity: 0.8, yoyo: true, repeat: -1, stagger: { each: 0.05, from: "start" }, duration: 0.6, ease: "sine.inOut" });
+  });
+</script>

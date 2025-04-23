@@ -1,0 +1,6 @@
+/* Initial state: Hide company logos before animation */
+.company-wrapper {
+  opacity: 0;
+  /* Optional: you might want visibility: hidden; too, depending on layout needs */
+  /* visibility: hidden; */
+}

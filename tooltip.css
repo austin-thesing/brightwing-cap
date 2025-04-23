@@ -1,0 +1,96 @@
+.custom-tooltip {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  min-width: 280px;
+  max-width: 400px;
+  position: absolute;
+  right: -8px;
+  top: calc(100% + 12px);
+  z-index: 1000;
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  transform-origin: top right;
+  will-change: transform, opacity;
+}
+
+.custom-tooltip-trigger {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.custom-tooltip.is-visible {
+  opacity: 1;
+  display: block;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.custom-tooltip ul.tooltip-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.custom-tooltip ul.tooltip-list li {
+  padding: 8px 0;
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.custom-tooltip ul.tooltip-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.custom-tooltip ul.tooltip-list li:first-child {
+  padding-top: 0;
+}
+
+/* Arrow indicator */
+.custom-tooltip::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid white;
+  z-index: 1001;
+}
+
+/* Mobile and Tablet styles */
+@media screen and (max-width: 991px) {
+  .custom-tooltip {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    top: 100%;
+    transform: translateX(-50%) scale(0.95);
+    min-width: calc(100vw - 48px);
+    max-width: calc(100vw - 48px);
+    margin-top: 12px;
+  }
+
+  .custom-tooltip.is-visible {
+    transform: translateX(-50%) scale(1);
+  }
+
+  .custom-tooltip::before {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Tablet styles - ensure arrow alignment */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .custom-tooltip::before {
+    right: calc(16px + 0.5rem);
+  }
+}
